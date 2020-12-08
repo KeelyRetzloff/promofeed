@@ -1,0 +1,190 @@
+/*
+Main App Stylesheet
+*/
+
+
+/* 
+Media Queries to expand on design specificity
+@media screen and (max-width:376) {}
+*/
+
+//variables
+$grey: #1A1A1A;
+$litegrey: #5C5C5C;
+
+
+//general 
+.App {
+  text-align: left;
+  background-color: $grey;
+}
+
+section {
+  margin: auto;
+}
+
+
+//header
+.App-logo {
+  width: 78px;
+  height: 28px;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.icon-wrap {
+  opacity:1;
+  display:flex;
+  align-items: center;;
+}
+
+.App-searchicon {
+  width: 29px;
+  height: 28px;
+  margin: 0 10px;
+}
+
+.App-menuicon {
+  width: 38px;
+  height: 28px;
+}
+
+.App-header {
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 0;
+  height: 72px;
+  background: #000000E6 0% 0% no-repeat padding-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-between;
+  margin: auto;
+  padding: 0 20px;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  z-index:10;
+}
+
+//page title
+.app-titlebar {
+  color: white;
+  display: flex;
+  justify-content:space-between;
+  margin: 30px 20px 0px;
+  padding-bottom:20px;
+  max-width: 600px;
+}
+
+.app-titlebar h1 {
+  align-self: flex-end;
+  font-size: 1.75em;
+  margin-bottom:0;
+}
+
+.app-titlebar button {
+  align-self: flex-end;;
+  background-color: $grey;
+  text-decoration: underline;
+  font-size: 1.2rem;
+  color: white;
+  border: none;
+  padding-right:0;
+  margin-bottom:4px;
+  text-align:right;
+}
+
+//content feed
+.content-container {
+  margin: 0 10px;
+  padding: 0 0 40px;
+  max-width: 600px;
+  
+}
+
+.post-overlay {
+  background: #222222B3 0% 0% no-repeat padding-box;
+  display:flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  height:60px;
+  width: 100%;
+  z-index:5;
+  padding: 0 10px;
+  margin-bottom: -60px;
+}
+
+.profile-placeholder {
+  width: 40px;
+  height: 40px;
+}
+
+.profile-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10px;
+}
+
+.feed-title {
+  color: white;
+  // margin-top:-2px;
+  margin: auto;
+  width: 100%;
+  font-weight:500;
+}
+
+.feed-subtitle {
+  color: white;
+  margin: auto;
+  font-weight: 100;
+  width:100%;
+}
+
+.feed-img {
+  width: 100%;
+  height:357px;
+  object-fit: cover;
+  object-position: 20% 10%; 
+  overflow:hidden;
+  max-width: 600px;
+}
+
+
+.post-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items:center;
+  border: solid 1px $litegrey;
+  margin-bottom: 40px;
+
+  &:after {
+    content: " ";
+    position: relative;
+    bottom:0;
+    left: calc(50% - 75px);
+    margin-bottom:-40px;
+    width: 150px;
+    color: white;
+    border-bottom: solid 1px $litegrey;
+  }
+}
+
+//scroll hinting - expand on later
+div.scroll-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom:-5px;
+  background: transparent linear-gradient(180deg, #35353500 0%, #000000 100%) 0% 0% no-repeat padding-box;
+  width: 100%;
+  height: 288px;
+  z-index:8;
+
+  &.hidden {
+    display: none !important;
+  }
+  &.shown {
+    display: block;
+  }
+}
+
