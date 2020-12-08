@@ -1,6 +1,6 @@
 ## TVM PromoFeed built by Keely Retzloff
 
-This project was created through create-react-app, scripts to control project are attached below. Please do not attempt to use my code or creative work without permission.
+This project was created through create-react-app, scripts to control project are attached below. Please ask for permission before using code.
 
 ## Available Scripts
 
